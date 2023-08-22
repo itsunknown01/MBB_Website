@@ -13,6 +13,9 @@ module.exports = {
       width: {
         'hero': "90%"
       },
+      margin:{
+        'row': "5%"
+      },
   },
 },
   plugins: [],
