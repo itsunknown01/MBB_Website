@@ -32,14 +32,32 @@ export const AboutSectionData = [
 export const CampusImage = [
   {
     name: "Student",
-    image: london
+    image: london,
   },
   {
     name: "Front-Entrance",
-    image: newyork
+    image: newyork,
   },
   {
     name: "Events",
-    image: washington
-  }
+    image: washington,
+  },
+];
+
+export const CoursesData = [
+  {
+    name: "Intermediate",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nulla facilisi morbi tempus iaculis. Sed pulvinar proin gravida hendrerit. Pulvinar pellentesque habitant morbi tristique senectus.",
+  },
+  {
+    name: "Degree",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nulla facilisi morbi tempus iaculis. Sed pulvinar proin gravida hendrerit. Pulvinar pellentesque habitant morbi tristique senectus.",
+  },
+  {
+    name: "Post Graduation",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nulla facilisi morbi tempus iaculis. Sed pulvinar proin gravida hendrerit. Pulvinar pellentesque habitant morbi tristique senectus.",
+  },
 ];

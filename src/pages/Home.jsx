@@ -3,6 +3,7 @@ import React from "react";
 import { AboutSectionData, CampusImage } from "../data/constant";
 import AboutSection from "../components/ui/AboutSection";
 import test from "../assests/images/washington.png";
+import Courses from "../components/ui/Courses";
 
 const Home = () => {
   return (
@@ -44,6 +45,8 @@ const Home = () => {
           );
         })}
       </div>
+
+      <Courses/>
 
       {/* Campus */}
 

@@ -7,7 +7,8 @@ module.exports = {
     },
     colors:{
       effect: "rgba(226, 0, 0, 0.7)",
-      text: "white"
+      text: "white",
+      course: "#fff3f3"
     },
     extend: {
       backgroundImage: {
@@ -21,7 +22,11 @@ module.exports = {
         'row': "5%"
       },
       flex:{
-        "size": "32%" 
+        size: "32%", 
+        course: "31%"
+      },
+      boxShadow: {
+        course: "0 0 20px 0px rgba(0, 0, 0, 0.2)"
       },
   },
 },
