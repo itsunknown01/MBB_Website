@@ -1,9 +1,13 @@
 import React from "react";
 
-import { AboutSectionData, CampusImage } from "../data/constant";
+import {
+  AboutSectionData,
+  CampusImage,
+  TestimonialData,
+} from "../data/constant";
 import AboutSection from "../components/ui/AboutSection";
-import test from "../assests/images/washington.png";
 import Courses from "../components/ui/Courses";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -30,6 +34,7 @@ const Home = () => {
       </section>
 
       {/* About */}
+
       <div className="m-auto pt-10 pb-20">
         {AboutSectionData.map((section, index) => {
           const pattern = index % 2 === 0 ? "left" : "right";
@@ -46,7 +51,7 @@ const Home = () => {
         })}
       </div>
 
-      <Courses/>
+      <Courses />
 
       {/* Campus */}
 
@@ -63,18 +68,59 @@ const Home = () => {
               className="basis-size rounded-xl mb-8 relative overflow-hidden"
             >
               <img src={item.image} alt="campus" className="w-full block" />
-              <div
-                className="layer"
-              >
-                <h3>
-                  {item.name}
-                </h3>
+              <div className="layer">
+                <h3>{item.name}</h3>
               </div>
             </div>
           ))}
         </div>
-        
       </section>
+
+      {/* Testimonials */}
+
+      <section className="w-4/5 m-auto p-[100px] text-center">
+        <h1 className="text-[36px] font-semibold">Testimonials</h1>
+
+        <p className="text-[#777] text-[14px] font-light leading-[22px] p-[10px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <div className="mt-row flex justify-between text-center">
+          {TestimonialData.map((testimonial) => (
+            <div
+              key={testimonial.name}
+              className="basis-[44%] rounded-[10px] mb-[5%] text-left bg-[#fff3f3] p-[25px] cursor-pointer flex"
+            >
+              <img
+                src={testimonial.image}
+                alt="student"
+                className="h-[40px] ml-[5px] mr-[30px] rounded-[50%]"
+              />
+              <div>
+                <p className="text-[#777] text-[14px] font-light leading-[22px] p-0">
+                  {testimonial.content}
+                </p>
+                <h3 className="mt-[15px] text-left">{testimonial.name}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+
+      <section className="m-[100px_auto] w-[80%] bg-cta bg-center bg-cover rounded-[10px] text-center p-[100px_0]">
+        <h1 className="text-text mb-[40px] p-0">
+          Enroll for our various Courses
+        </h1>
+        <Link
+          href="/"
+          className="inline-block no-underline text-[#fff] border-[1px_solid_#fff] p-[12px_34px] text-[13px] relative cursor-pointer "
+        >
+          Contact Us
+        </Link>
+      </section>
+
     </>
   );
 };

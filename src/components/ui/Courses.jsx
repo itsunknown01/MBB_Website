@@ -14,14 +14,14 @@ const Courses = () => {
           {CoursesData.map((item, index) => (
             <div
               key={index}
-              className=" bg-course basis-1/3 rounded-xl mb-row px-3 py-5 box-border transition duration-500 hover:shadow-course"
+              className="course-col"
             >
               <h3>{item.name}</h3>
               <p>{item.content}</p>
             </div>
           ))}
         </div>
-      </div>
+      </div>``
     </section>
   );
 };
