@@ -1,12 +1,11 @@
 import React from 'react'
-import { AboutSectionData } from '../data/constant';
-import AboutSection from '../components/ui/AboutSection';
+import Courses from '../components/ui/Courses'
 
-const About = () => {
+const Course = () => {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="min-h-9 w-full relative bg-center bg-cover min-h-92 bg-hero-section">
+   <>
+     {/* Hero Section */}
+     <section className="min-h-9 w-full relative bg-center bg-cover min-h-92 bg-hero-section">
         <div className="w-hero absolute text-left text-white top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
           <h1 className="text-6xl pb-2">Mahatma Balya Bhawan</h1>
           <p className="mx-0 mt-2.5 mb-10 text-md">
@@ -26,26 +25,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* About Section */}
-
-      <div className="m-auto pt-10 pb-20">
-        {AboutSectionData.map((section, index) => {
-          const pattern = index % 2 === 0 ? "left" : "right";
-
-          return (
-            <AboutSection
-              key={index}
-              pattern={pattern}
-              title={section.title}
-              content={section.content}
-              image={section.image}
-            />
-          );
-        })}
-      </div>
-
-    </>
+      <Courses/>
+   </>
   )
 }
 
-export default About
+export default Course
