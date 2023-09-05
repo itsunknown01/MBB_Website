@@ -4,7 +4,7 @@ import {
   AboutSectionData,
   CampusImage,
   TestimonialData,
-} from "../data/constant";
+} from "../constants";
 import AboutSection from "../components/ui/AboutSection";
 import Courses from "../components/ui/Courses";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const Home = () => {
     <>
       {/* Hero Section */}
       <section className="min-h-9 w-full relative bg-center bg-cover min-h-92 bg-hero-section">
-        <div className="w-hero absolute text-left text-white top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+        <div className="w-hero absolute text-left text-text top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
           <h1 className="text-6xl pb-2">Mahatma Balya Bhawan</h1>
           <p className="mx-0 mt-2.5 mb-10 text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

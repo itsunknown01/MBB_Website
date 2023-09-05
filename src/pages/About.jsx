@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutSectionData } from '../data/constant';
+import { AboutSectionData } from '../constants';
 import AboutSection from '../components/ui/AboutSection';
 
 const About = () => {

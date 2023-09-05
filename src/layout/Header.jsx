@@ -1,7 +1,7 @@
 import React from "react";
 
 import logo from "../assests/images/logo.png";
-import { NavbarItems } from "../data/constant";
+import { NavbarItems } from "../constants";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
