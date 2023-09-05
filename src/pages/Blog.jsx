@@ -6,42 +6,28 @@ const Blog = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-9 w-full relative bg-center bg-cover min-h-92 bg-hero-section">
-        <div className="w-hero absolute text-left text-white top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
-          <h1 className="text-6xl pb-2">Mahatma Balya Bhawan</h1>
-          <p className="mx-0 mt-2.5 mb-10 text-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et <br />
-            dolore magna aliqua. Malesuada fames ac turpis egestas sed tempus
-            urna. Amet commodo nulla <br /> facilisi nullam. Non blandit massa
-            enim nec dui nunc. Blandit aliquam etiam erat velit scelerisque in
-            dictum.
-          </p>
-          <a
-            href="/blog/:id"
-            className="text-xs inline-block bg-transparent relative px-8 py-3 border-2 text-white border-white hover:bg-red-600 hover:border-red-600 transition hover:duration-1000"
-          >
-            Visit Us To Know More
-          </a>
+      <section className="min-h-9 w-full relative bg-center bg-cover min-h-[50vh] bg-blog-section">
+        <div className="w-hero absolute text-left text-text top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+          <h1 className="text-[36px] font-semibold mt-[100px] text-center">Our Offered Courses</h1>
         </div>
       </section>
 
       {/* Blogs */}
 
       <section className="w-4/5 m-auto p-[60px]">
-        <div className="mt-[5%] flex justify-center text-center">
+        <div className="mt-[5%] flex justify-between text-center">
           <div className="basis-[65%]">
             <img src={certificate} alt="certificate" className="w-full" />
-            <h2 className="text-[#222]">
+            <h2 className="text-[#222] font-semibold my-[30px]">
               Our Certificate & Online Programs for 2023
             </h2>
             {BlogContentData.map((content) => (
-              <p key={content.title} className="text-[#999] mb-2">
+              <p key={content.title} className="text-[#999] mb-6">
                 {content.content}
               </p>
             ))}
 
-            <div className="border-[1px_solid_#ccc] my-[50px] mx-0 p-[10px_20px]">
+            <div className="border-[1px] border-solid border-[#ccc] my-[50px] mx-0 p-[10px_20px]">
               <h3 className="text-left">Leave a comment</h3>
               <form>
                 <input
@@ -68,6 +54,7 @@ const Blog = () => {
               </form>
             </div>
           </div>
+
           <div className="basis-[32%]">
             <h3 className="bg-[#f44336] text-[#fff] py-[7px] px-0 text-[16px] mb-[20px]">
               Post Categories
@@ -75,7 +62,7 @@ const Blog = () => {
             {BlogCoursesData.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center color-[#555] p-2 box-border"
+                className="flex items-center justify-between color-[#555] p-2 box-border"
               >
                 <span component="span">{item.name}</span>
                 <span component="span">{item.num}</span>

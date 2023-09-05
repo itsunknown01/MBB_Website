@@ -4,9 +4,9 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-9 w-full relative bg-center bg-cover min-h-92 bg-hero-section">
-        <div className="w-hero absolute text-left text-white top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
-          <h1 className="text-[36px] font-semibold mt-[100px]">Contact Us</h1>
+      <section className="w-full relative bg-center bg-cover min-h-[50vh] bg-contact-section">
+        <div className="w-hero absolute text-left text-text top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+          <h1 className="text-[36px] font-semibold mt-[100px] text-center">Contact Us</h1>
         </div>
       </section>
 
