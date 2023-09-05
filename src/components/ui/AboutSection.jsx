@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutSection = ({ pattern, title, content, image }) => {
+const AboutSection = ({ pattern, mobile, title, content, image }) => {
   const isLeft = pattern === "left";
 
   return (
@@ -8,7 +8,7 @@ const AboutSection = ({ pattern, title, content, image }) => {
       <div
         className={`mt-row flex justify-between text-center ${
           isLeft ? "flex-row-reverse" : ""
-        }`}
+        } ${mobile ? "flex-col-reverse gap-y-10": ""}`}
       >
         <div className="basis-1/2 flex flex-col justify-center items-center">
           <h1 className=" text-4xl font-semibold mb-12">{title}</h1>

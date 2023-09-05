@@ -9,18 +9,18 @@ import AboutSection from "../components/ui/AboutSection";
 import Courses from "../components/ui/Courses";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ mobile }) => {
   return (
     <>
       {/* Hero Section */}
       <section className="min-h-9 w-full relative bg-center bg-cover min-h-92 bg-hero-section">
-        <div className="w-hero absolute text-left text-text top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+        <div className={`w-hero absolute text-left text-text top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 ${mobile ? "top-[80%]" : ""}`}>
           <h1 className="text-6xl pb-2">Mahatma Balya Bhawan</h1>
           <p className="mx-0 mt-2.5 mb-10 text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et <br />
+            eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Malesuada fames ac turpis egestas sed tempus
-            urna. Amet commodo nulla <br /> facilisi nullam. Non blandit massa
+            urna. Amet commodo nulla facilisi nullam. Non blandit massa
             enim nec dui nunc. Blandit aliquam etiam erat velit scelerisque in
             dictum.
           </p>
@@ -35,7 +35,7 @@ const Home = () => {
 
       {/* About */}
 
-      <div className="m-auto pt-10 pb-20">
+      <div className="m-auto pt-10 pb-10">
         {AboutSectionData.map((section, index) => {
           const pattern = index % 2 === 0 ? "left" : "right";
 
@@ -43,6 +43,7 @@ const Home = () => {
             <AboutSection
               key={index}
               pattern={pattern}
+              mobile = {mobile}
               title={section.title}
               content={section.content}
               image={section.image}
@@ -51,17 +52,17 @@ const Home = () => {
         })}
       </div>
 
-      <Courses />
+      <Courses mobile={mobile} />
 
       {/* Campus */}
 
-      <section className="w-4/5 m-auto text-center">
+      <section className="w-4/5 m-auto text-center pt-10">
         <h1 className="text-4xl font-semibold">Our Campus</h1>
         <p className="text-sm font-semibold p-2.5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
 
-        <div className="mt-row flex justify-between text-center">
+        <div className={`mt-row flex justify-between text-center ${mobile? "flex-col" : ""}`}>
           {CampusImage.map((item, index) => (
             <div
               key={index}
@@ -78,14 +79,14 @@ const Home = () => {
 
       {/* Testimonials */}
 
-      <section className="w-4/5 m-auto p-[100px] text-center">
+      <section className="w-4/5 m-auto p-10 text-center">
         <h1 className="text-[36px] font-semibold">Testimonials</h1>
 
         <p className="text-[#777] text-[14px] font-light leading-[22px] p-[10px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
 
-        <div className="mt-row flex justify-between text-center">
+        <div className={`${mobile? "flex-col gap-y-5" : ""} mt-row flex justify-between text-center`}>
           {TestimonialData.map((testimonial) => (
             <div
               key={testimonial.name}
@@ -109,7 +110,7 @@ const Home = () => {
 
       {/* CTA */}
 
-      <section className="m-[100px_auto] w-[80%] bg-cta bg-center bg-cover rounded-[10px] text-center p-[100px_0]">
+      <section className="mx-auto my-10 w-[80%] bg-cta bg-center bg-cover rounded-[10px] text-center p-[100px_0]">
         <h1 className="text-text mb-[40px] p-0">
           Enroll for our various Courses
         </h1>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Courses from '../components/ui/Courses'
 
-const Course = () => {
+const Course = ({mobile}) => {
   return (
    <>
      {/* Hero Section */}
@@ -11,7 +11,7 @@ const Course = () => {
         </div>
       </section>
 
-      <Courses/>
+      <Courses mobile={mobile}/>
    </>
   )
 }

@@ -47,17 +47,17 @@ export const CampusImage = [
 
 export const CoursesData = [
   {
-    name: "Intermediate",
+    name: "KinderGarden",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nulla facilisi morbi tempus iaculis. Sed pulvinar proin gravida hendrerit. Pulvinar pellentesque habitant morbi tristique senectus.",
   },
   {
-    name: "Degree",
+    name: "High School",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nulla facilisi morbi tempus iaculis. Sed pulvinar proin gravida hendrerit. Pulvinar pellentesque habitant morbi tristique senectus.",
   },
   {
-    name: "Post Graduation",
+    name: "Higher Secondary",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nulla facilisi morbi tempus iaculis. Sed pulvinar proin gravida hendrerit. Pulvinar pellentesque habitant morbi tristique senectus.",
   },
@@ -80,13 +80,11 @@ export const TestimonialData = [
 ];
 
 export const BlogCoursesData = [
-  { name: "Business Analytics", num: 21 },
-  { name: "Data Science", num: 28 },
-  { name: "Machine Learning", num: 15 },
+  { name: "Commerce", num: 21 },
+  { name: "Humanties", num: 28 },
+  { name: "Science", num: 15 },
   { name: "Computer Science", num: 34 },
-  { name: "AutoCAD", num: 42 },
-  { name: "Journalism", num: 22 },
-  { name: "Commerce", num: 30 },
+  { name: "English", num: 42 },
 ];
 
 export const BlogContentData = [

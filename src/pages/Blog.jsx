@@ -2,7 +2,7 @@ import React from "react";
 import { BlogContentData, BlogCoursesData } from "../constants";
 import certificate from "../assests/images/certificate.jpg";
 
-const Blog = () => {
+const Blog = ({mobile}) => {
   return (
     <>
       {/* Hero Section */}
@@ -15,11 +15,11 @@ const Blog = () => {
       {/* Blogs */}
 
       <section className="w-4/5 m-auto p-[60px]">
-        <div className="mt-[5%] flex justify-between text-center">
+        <div className={`mt-[5%] flex justify-between text-center ${mobile ? "flex-col-reverse gap-16" : ""}`}>
           <div className="basis-[65%]">
             <img src={certificate} alt="certificate" className="w-full" />
             <h2 className="text-[#222] font-semibold my-[30px]">
-              Our Certificate & Online Programs for 2023
+              Our Courses Motives
             </h2>
             {BlogContentData.map((content) => (
               <p key={content.title} className="text-[#999] mb-6">
@@ -57,7 +57,7 @@ const Blog = () => {
 
           <div className="basis-[32%]">
             <h3 className="bg-[#f44336] text-[#fff] py-[7px] px-0 text-[16px] mb-[20px]">
-              Post Categories
+              Categories
             </h3>
             {BlogCoursesData.map((item, index) => (
               <div

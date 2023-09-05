@@ -2,7 +2,7 @@ import React from 'react'
 import { AboutSectionData } from '../constants';
 import AboutSection from '../components/ui/AboutSection';
 
-const About = () => {
+const About = ({mobile}) => {
   return (
     <>
       {/* Hero Section */}
@@ -22,6 +22,7 @@ const About = () => {
             <AboutSection
               key={index}
               pattern={pattern}
+              mobile={mobile}
               title={section.title}
               content={section.content}
               image={section.image}
