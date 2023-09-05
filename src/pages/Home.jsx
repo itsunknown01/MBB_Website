@@ -14,7 +14,7 @@ const Home = ({ mobile }) => {
     <>
       {/* Hero Section */}
       <section className="min-h-9 w-full relative bg-center bg-cover min-h-92 bg-hero-section">
-        <div className={`w-hero absolute text-left text-text top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 ${mobile ? "top-[80%]" : ""}`}>
+        <div className={`w-hero absolute text-left text-text top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 ${mobile ? "top-[60%]" : ""}`}>
           <h1 className="text-6xl pb-2">Mahatma Balya Bhawan</h1>
           <p className="mx-0 mt-2.5 mb-10 text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -35,7 +35,7 @@ const Home = ({ mobile }) => {
 
       {/* About */}
 
-      <div className="m-auto pt-10 pb-10">
+      <div className="m-auto pt-10 pb-10 gap-y-10 flex flex-col">
         {AboutSectionData.map((section, index) => {
           const pattern = index % 2 === 0 ? "left" : "right";
 
